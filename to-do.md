@@ -1,0 +1,47 @@
+- DATABASE -
+    - [] New database title "weekend-to-do-app"
+        - [] Table for to-do list
+            - [] id (primary key)
+            - [] task-name
+            - [] Completed (true/false?)
+        - [] Should display on DOM (GET route)
+        - [] New tasks should be stored (POST route)
+        - [] Tasks should be deleted from the database (DELETE route)
+        - [] Update if complte (PUT route)
+    - [] Copy database to database.sql file for Mason
+
+- SERVER SIDE -
+    - [] Create server.js file
+    - [] Link in express and pg
+    - [] To-do list router (test in server.js first)
+    - [] GET route should grab db and send to front end
+    - [] POST to take a new task and send to db (SANITIZE THAT DATA)
+        - [] Server side validation
+    - [] DELETE should target an id number of the task (SANITIZE THAT DATA TOO!)
+    - [] PUT should update the completed key via id (YOU GUESS IT! SANITIZE THIS TOO!)
+
+- FRONTEND -
+    - [] Create index.html
+        -[] Use data-id tag to get id number for PUT and DELETE
+    - [] Create client.js
+    - [] Create style.css
+    - [] Create jQuery.css
+    - [] Link files to HTML
+    - [] appendDom function to display to-do list on DOM
+        - [] Include delete button to append for DELETE route
+        - [] Include complete button to append for PUT route
+        - [] If conditional to change css if response.complete is true
+    - [] getList to send GET request to server for to-do list update
+    - [] deleteTask function to delete a task from the list
+        - [] Variable to get the id from the data
+        - [] Click listener to onReady for delete button
+    - [] completeTask to update completed key
+        - [] Variable to save off id from data
+        - [] Click listener in onReady for complete button
+    - [] HTML layout that makes sence
+    - [] Styling
+        - [] Style background color/image of page
+        - [] New font famliy and size for text
+        - [] Text or background color of task to show complete and still need to be done
+    
+
