@@ -1,9 +1,9 @@
 - DATABASE -
-    - [] New database title "weekend-to-do-app"
-        - [] Table for to-do list
-            - [] id (primary key)
-            - [] task-name
-            - [] Completed (true/false?)
+    - [x] New database title "weekend-to-do-app"
+        - [x] Table for to-do list
+            - [x] id (primary key)
+            - [x] task-name
+            - [x] Completed (true/false?)
         - [] Should display on DOM (GET route)
         - [] New tasks should be stored (POST route)
         - [] Tasks should be deleted from the database (DELETE route)
@@ -11,8 +11,8 @@
     - [] Copy database to database.sql file for Mason
 
 - SERVER SIDE -
-    - [] Create server.js file
-    - [] Link in express and pg
+    - [x] Create server.js file
+    - [x] Link in express and pg
     - [] To-do list router (test in server.js first)
     - [] GET route should grab db and send to front end
     - [] POST to take a new task and send to db (SANITIZE THAT DATA)
@@ -21,11 +21,11 @@
     - [] PUT should update the completed key via id (YOU GUESS IT! SANITIZE THIS TOO!)
 
 - FRONTEND -
-    - [] Create index.html
+    - [x] Create index.html
         -[] Use data-id tag to get id number for PUT and DELETE
-    - [] Create client.js
-    - [] Create style.css
-    - [] Create jQuery.css
+    - [x] Create client.js
+    - [x] Create style.css
+    - [x] Create jQuery.css
     - [] Link files to HTML
     - [] appendDom function to display to-do list on DOM
         - [] Include delete button to append for DELETE route
