@@ -35,3 +35,18 @@ function appendDom(response){
         )
     };
 };
+
+function submitTask(){
+    $.ajax({
+        method: "POST",
+        url: "/tasks",
+        data: {
+            task_name: $("#taskInput").val(),
+            complete: false
+        }
+    }).then(() =>  getTasks())
+    .catch((err)=> {
+        console.log('Error in POSTing to task list', err);
+    });
+    $("#taskInput").val('');
+}
