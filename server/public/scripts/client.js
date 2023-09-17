@@ -3,6 +3,7 @@ $(() => {
     getTasks();
     $('#submitButton').on('click', submitTask);
     $('#showTasks').on('click', '#deleteButton', deleteTask);
+    $('#showTasks').on('click', '#completeButton', completeTask);
 });
 
 function getTasks(){
@@ -52,7 +53,17 @@ function submitTask(){
     $("#taskInput").val('');
 };
 
-
+function completeTask(event){
+    const id = $(event.target).data('id');
+    console.log(id);
+    $.ajax({
+        method: "PUT",
+        url: `/tasks/${id}`
+    }).then(() => getTasks())
+    .catch((err) => {
+        console.log('Unable to update task', err)
+    });
+};
 
 function deleteTask(event){
 const id = $(event.target).data('id');
