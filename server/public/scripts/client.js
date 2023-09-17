@@ -1,3 +1,4 @@
+//Sets up click listerers and getTasks to run on page load
 $(() => {
     console.log('JS and JQ');
     getTasks();
@@ -6,6 +7,7 @@ $(() => {
     $('#showTasks').on('click', '#completeButton', completeTask);
 });
 
+//Function to get task list from the back end then display the list on DOM
 function getTasks(){
     $.ajax({
         method: "GET",
@@ -17,6 +19,7 @@ function getTasks(){
     });
 };
 
+//Appends the DOM with the response from the getTasks function and adds them to the DOM in table format.
 function appendDom(response){
     $("#showTasks").empty();
     for (const task of response){
@@ -38,6 +41,7 @@ function appendDom(response){
     };
 };
 
+//Takes submitted task from DOM and sends the data to be added to the database on the backend.
 function submitTask(){
     $.ajax({
         method: "POST",
@@ -53,6 +57,7 @@ function submitTask(){
     $("#taskInput").val('');
 };
 
+//Function sets the completed status of a task to TRUE if the complete button is clicked
 function completeTask(event){
     const id = $(event.target).data('id');
     console.log(id);
@@ -65,6 +70,7 @@ function completeTask(event){
     });
 };
 
+//Deletes table item base on id when delete button is clicked
 function deleteTask(event){
 const id = $(event.target).data('id');
 console.log(id);

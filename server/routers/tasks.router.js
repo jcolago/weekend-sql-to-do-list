@@ -1,8 +1,9 @@
+//Sets up express for use
 const express = require("express");
 const router = express.Router();
 const pool = require("../modules/pool");
 
-
+//Get route to get the tabel data from database to be sent to front end to be displayed on DOM
 router.get("/", (req, res) => {
     console.log('GET request to /tasks');
     const queryText = `SELECT * FROM "tasks" ORDER BY "id" ASC;`;
@@ -11,11 +12,12 @@ router.get("/", (req, res) => {
         .query(queryText)
         .then((result) => res.send(result.rows))
         .catch((err) => {
-            console.log('Error in GET reqyest', err);
+            console.log('Error in GET request', err);
             res.sendStatus(500)
         });
 });
 
+//Takes data sent from front end and adds a new item to the tasks table in the database.
 router.post("/", (req, res) => {
     console.log('POST request sent to /tasks');
     const task = req.body;
@@ -40,6 +42,8 @@ router.post("/", (req, res) => {
     });
 });
 
+
+//Deletes an item from the database with a matching id number
 router.delete("/:id", (req, res) =>{
     const id = req.params.id;
     console.log('DELETE request to /tasks/ with an id of:', id);
@@ -59,6 +63,7 @@ router.delete("/:id", (req, res) =>{
     });
 });
 
+//Changes completed to true of task with matching id number
 router.put("/:id", (req, res) =>{
     const id =req.params.id
     console.log('PUT request to /tasks/ to update with id', id)
@@ -74,5 +79,5 @@ router.put("/:id", (req, res) =>{
         res.sendStatus(500);
     });
 });
-
+//exports router for use
 module.exports = router;
