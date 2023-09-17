@@ -4,11 +4,11 @@
             - [x] id (primary key)
             - [x] task-name
             - [x] Completed (true/false?)
-        - [] Should display on DOM (GET route)
-        - [] New tasks should be stored (POST route)
-        - [] Tasks should be deleted from the database (DELETE route)
-        - [] Update if complte (PUT route)
-    - [] Copy database to database.sql file for Mason
+        - [x] Should display on DOM (GET route)
+        - [x] New tasks should be stored (POST route)
+        - [x] Tasks should be deleted from the database (DELETE route)
+        - [x] Update if complte (PUT route)
+    - [x] Copy database to database.sql file for Mason
 
 - SERVER SIDE -
     - [x] Create server.js file
@@ -28,19 +28,19 @@
     - [x] Create jQuery.css
     - [x] Link files to HTML
     - [] appendDom function to display to-do list on DOM
-        - [] Include delete button to append for DELETE route
-        - [] Include complete button to append for PUT route
-        - [] If conditional to change css if response.complete is true
-    - [] getList to send GET request to server for to-do list update
-    - [] deleteTask function to delete a task from the list
-        - [] Variable to get the id from the data
-        - [] Click listener to onReady for delete button
-    - [] completeTask to update completed key
-        - [] Variable to save off id from data
-        - [] Click listener in onReady for complete button
-    - [] HTML layout that makes sence
-    - [] Styling
-        - [] Style background color/image of page
-        - [] New font famliy and size for text
-        - [] Text or background color of task to show complete and still need to be done
+        - [x] Include delete button to append for DELETE route
+        - [x] Include complete button to append for PUT route
+        - [x] If conditional to change css if response.complete is true
+    - [x] getList to send GET request to server for to-do list update
+    - [x] deleteTask function to delete a task from the list
+        - [x] Variable to get the id from the data
+        - [x] Click listener to onReady for delete button
+    - [x] completeTask to update completed key
+        - [x] Variable to save off id from data
+        - [x] Click listener in onReady for complete button
+    - [x] HTML layout that makes sence
+    - [x] Styling
+        - [x] Style background color/image of page
+        - [x] New font famliy and size for text
+        - [x] Text or background color of task to show complete and still need to be done
     

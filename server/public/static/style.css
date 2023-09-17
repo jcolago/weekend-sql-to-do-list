@@ -1,0 +1,38 @@
+body {
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#submitButton{
+    width: 25%; 
+}
+
+#taskTable {
+    text-align: center;
+    margin: auto;
+}
+
+#taskTable,
+#taskTable td {
+    width: 60%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.completedTask{ 
+    background-color: green;
+    color: white;
+}
