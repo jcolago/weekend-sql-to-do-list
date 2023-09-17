@@ -67,7 +67,18 @@ app.delete("/tasks/:id", (req, res) =>{
 app.put("/tasks/:id", (req, res) =>{
     const id =req.params.id
     console.log('PUT request to /tasks/ to update with id', id)
-})
+    const queryText = `UPDATE "tasks" SET "completed" = 'true' WHERE "id" = $1;`;
+
+    pool
+    .query(queryText,[id])
+    .then(() =>{
+        res.sendStatus(204)
+    })
+    .catch((err)=>{
+        console.log('Error in PUT request', err);
+        res.sendStatus(500);
+    });
+});
 
 
 
