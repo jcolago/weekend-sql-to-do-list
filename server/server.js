@@ -48,6 +48,25 @@ app.post("/tasks", (req, res) => {
 app.delete("/tasks/:id", (req, res) =>{
     const id = req.params.id;
     console.log('DELETE request to /tasks/ with an id of:', id);
+    const queryText = `DELETE FROM "tasks" WHERE "id" = $1;`;
+
+    if (!id){
+        req.sendStatus(400);
+        return;
+    }
+
+    pool
+    .query(queryText, [id])
+    .then(()=> res.sendStatus(204))
+    .catch((err)=> {
+        console.log('Error in DELETing from tasks table', err);
+        res.sendStatus(500);
+    });
+});
+
+app.put("/tasks/:id", (req, res) =>{
+    const id =req.params.id
+    console.log('PUT request to /tasks/ to update with id', id)
 })
 
 

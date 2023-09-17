@@ -44,4 +44,3 @@
         - [] New font famliy and size for text
         - [] Text or background color of task to show complete and still need to be done
     
-
