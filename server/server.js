@@ -25,8 +25,30 @@ app.post("/tasks", (req, res) => {
     console.log('POST request sent to /tasks');
     const task = req.body;
     console.log('POST request at /tasks with data of', task);
-    res.sendStatus(201);
+    const queryText =  `INSERT INTO "tasks" ("task_name", "completed")
+                        VALUES($1, $2)`;
+
+    if (!task.task_name){
+        res.sendStatus(400);
+        return;
+    }
+
+    pool
+    .query(queryText, [
+        task.task_name,
+        Boolean(task.completed),
+    ])
+    .then(() => res.sendStatus(201))
+    .catch((err) => {
+        console.log('Error in POST request', err);
+        res.sendStatus(500);
+    });
 });
+
+app.delete("/tasks/:id", (req, res) =>{
+    const id = req.params.id;
+    console.log('DELETE request to /tasks/ with an id of:', id);
+})
 
 
 
