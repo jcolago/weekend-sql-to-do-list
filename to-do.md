@@ -13,12 +13,12 @@
 - SERVER SIDE -
     - [x] Create server.js file
     - [x] Link in express and pg
-    - [] To-do list router (test in server.js first)
-    - [] GET route should grab db and send to front end
-    - [] POST to take a new task and send to db (SANITIZE THAT DATA)
-        - [] Server side validation
-    - [] DELETE should target an id number of the task (SANITIZE THAT DATA TOO!)
-    - [] PUT should update the completed key via id (YOU GUESS IT! SANITIZE THIS TOO!)
+    - [x] To-do list router (test in server.js first)
+    - [x] GET route should grab db and send to front end
+    - [x] POST to take a new task and send to db (SANITIZE THAT DATA)
+        - [x] Server side validation
+    - [x] DELETE should target an id number of the task (SANITIZE THAT DATA TOO!)
+    - [x] PUT should update the completed key via id (YOU GUESS IT! SANITIZE THIS TOO!)
 
 - FRONTEND -
     - [x] Create index.html
@@ -26,7 +26,7 @@
     - [x] Create client.js
     - [x] Create style.css
     - [x] Create jQuery.css
-    - [] Link files to HTML
+    - [x] Link files to HTML
     - [] appendDom function to display to-do list on DOM
         - [] Include delete button to append for DELETE route
         - [] Include complete button to append for PUT route
