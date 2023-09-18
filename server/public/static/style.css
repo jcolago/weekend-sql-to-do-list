@@ -15,8 +15,8 @@ header {
     text-align: center;
 }
 
-#submitButton{
-    width: 25%; 
+#submitButton {
+    width: 25%;
 }
 
 #taskTable {
@@ -32,7 +32,7 @@ header {
     padding: 10px;
 }
 
-.completedTask{ 
+.completedTask {
     background-color: green;
     color: white;
 }

@@ -14,9 +14,7 @@ app.use("/tasks", tasksRouter);
 
 
 
-
-
-
+//Console log to run when connected to server
 app.listen(PORT, () => {
     console.log("listening on port", PORT);
 });

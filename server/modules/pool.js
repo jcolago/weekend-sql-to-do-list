@@ -7,7 +7,7 @@ const pool = new pg.Pool({
     max: 10,
     idleTimeoutMillis: 30000,
 });
-
+//Console log to run on successful connet and error on connection failure
 pool.on("connect", () => console.log("Successfully connected to postgres"));
 
 pool.on("error", (err) => console.log("Error in connection to postgres", err));
