@@ -54,7 +54,7 @@ router.delete("/:id", (req, res) => {
     const queryText = `DELETE FROM "tasks" WHERE "id" = $1;`;
 
     if (!id) {
-        req.sendStatus(400);
+        res.sendStatus(400);
         return;
     }
 
